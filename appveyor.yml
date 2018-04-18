@@ -5,6 +5,9 @@ install:
         Install-Module platyPS -Force
         Import-Module platyPS
 
+init:
+    - git config --global core.autocrlf true
+
 build_script:
     - ps: |
         New-ExternalHelp -Path .\docs -OutputPath en-US -Verbose -Force
